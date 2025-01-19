@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bonus_0">#FFFFFF</color>
+    <color name="bonus_1">#ADD8E6</color>
+    <color name="bonus_2">#5C96AF</color>
+    <color name="bonus_3">#FFB6C1</color>
+    <color name="bonus_4">#FA545A</color>
+    <color name="my_primary">#50A370</color>
+    <color name="my_primaryDark">@color/design_default_color_background</color>
+</resources>
