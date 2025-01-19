@@ -14,7 +14,6 @@ public class TilePile {
     }
 
     private void initializeBag() {
-        // Добавление букв в мешок с их количеством и стоимостью
         addTiles('О', 10, 1);
         addTiles('А', 8, 1);
         addTiles('Е', 8, 1);

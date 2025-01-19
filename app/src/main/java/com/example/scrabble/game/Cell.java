@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Cell {
     private Tile tile;  // Буква, размещенная в клетке
-    private final int bonus;// Бонус клетки: 0 - нет бонуса, 1 - удвоение буквы, 2 - утроение буквы, 3 - удвоение слова, 4 - утроение слова
+    private final int bonus; // Бонус клетки: 0 - нет бонуса, 1 - удвоение буквы, 2 - утроение буквы, 3 - удвоение слова, 4 - утроение слова
 
 
     public Cell(int bonusType) {
@@ -30,7 +30,6 @@ public class Cell {
         this.tile = tile;
     }
 
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -43,7 +42,6 @@ public class Cell {
     public int hashCode() {
         return Objects.hash(tile);
     }
-
 
     @NonNull
     @Override

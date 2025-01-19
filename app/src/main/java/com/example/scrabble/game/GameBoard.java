@@ -1,19 +1,12 @@
 package com.example.scrabble.game;
 
-import android.app.Activity;
-import android.content.Context;
 import android.util.Log;
-
-import com.example.scrabble.database.AppDatabase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GameBoard {
 

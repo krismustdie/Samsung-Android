@@ -1,12 +1,11 @@
 package com.example.scrabble.game;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Player {
-    private String name;
+    private final String name;
     private List<Tile> rack = new ArrayList<>();
     private int score = 0;
 

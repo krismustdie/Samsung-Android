@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.scrabble.database.Word;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder> {
@@ -24,11 +23,6 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
         return new WordViewHolder(view);
-    }
-
-    public void updateWordList(List<Word> newWordList) {
-        this.wordList = newWordList != null ? newWordList : new ArrayList<>();
-        notifyDataSetChanged();
     }
 
     @Override

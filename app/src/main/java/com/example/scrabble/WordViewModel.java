@@ -26,8 +26,4 @@ public class WordViewModel extends AndroidViewModel {
     public LiveData<List<Word>> getAllWords() {
         return allWords;
     }
-
-    public void insertWord(Word word) {
-        new Thread(() -> wordDao.insert(word)).start();
-    }
 }

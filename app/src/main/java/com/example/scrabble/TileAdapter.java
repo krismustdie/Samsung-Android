@@ -62,18 +62,12 @@ public class TileAdapter extends RecyclerView.Adapter<TileAdapter.ViewHolder> {
         holder.tileLetter.setText(String.valueOf(tile.getLetter()));
         holder.tilePoints.setText(String.valueOf(tile.getValue()));
 
-        // Выделение выбранной фишки
-//        if (selectedTiles.contains(tile)) {
-//            holder.itemView.setBackgroundColor(Color.YELLOW);
-//        } else {
-//            holder.itemView.setBackgroundColor(Color.TRANSPARENT);
-//        }
         if (selectedTiles.contains(tile)) {
             holder.itemView.setForeground(
                     ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.tile_overlay)
             );
         } else {
-            holder.itemView.setForeground(null); // Сбрасываем наложение
+            holder.itemView.setForeground(null);
         }
 
 

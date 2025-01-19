@@ -5,21 +5,19 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "words", indices = {@Index(value = "word", unique = true)})  // Указываем имя таблицы
+@Entity(tableName = "words", indices = {@Index(value = "word", unique = true)})
 public class Word {
 
-    @PrimaryKey(autoGenerate = true)  // Указываем, что id будет генерироваться автоматически
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo(name = "word")
-    private String word;  // Слово, которое будет храниться в базе данных
+    private String word;
 
-    // Конструктор
     public Word(String word) {
         this.word = word;
     }
 
-    // Геттеры и сеттеры
     public int getId() {
         return id;
     }

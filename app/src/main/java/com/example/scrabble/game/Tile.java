@@ -1,18 +1,16 @@
 package com.example.scrabble.game;
 
-import androidx.annotation.NonNull;
-
 import java.util.UUID;
 
 public class Tile {
     private final char letter;
     private final int points;
-    private final String id; // Уникальный идентификатор
+    private final String id;
 
     public Tile(char letter, int points) {
         this.letter = letter;
         this.points = points;
-        this.id = UUID.randomUUID().toString(); // Генерация уникального идентификатора
+        this.id = UUID.randomUUID().toString();
     }
 
     public Tile(char letter, int points, String id) {

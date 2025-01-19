@@ -20,13 +20,11 @@ public class Stat {
     @ColumnInfo(name = "totalGames")
     private int totalGames;
 
-    // Конструктор
     public Stat(String player, int score) {
         this.player = player;
         this.score = score;
     }
 
-    // Геттеры и сеттеры
     public int getId() {
         return id;
     }

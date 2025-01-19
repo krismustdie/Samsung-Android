@@ -16,18 +16,15 @@ public class VictoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_victory);
 
-        // Получение данных из Intent
         String winner = getIntent().getStringExtra("winner");
         String scores = getIntent().getStringExtra("scores");
 
-        // Установка текста победителя и результатов
         TextView tvWinner = findViewById(R.id.tvWinner);
         TextView tvScores = findViewById(R.id.tvScores);
 
         tvWinner.setText(Objects.equals(winner, "Ничья") ? "Ничья!" : "Победитель: " + winner);
         tvScores.setText("Результаты:\n" + scores);
 
-        // Кнопка возврата на главный экран
         Button btnBackToMain = findViewById(R.id.btnBackToMain);
         btnBackToMain.setOnClickListener(v -> {
             Intent intent = new Intent(VictoryActivity.this, MainActivity.class);

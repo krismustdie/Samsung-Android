@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
         continueButton = findViewById(R.id.continueButton);
         multiplayerButton = findViewById(R.id.multiplayerButton);
 
-        // Обработчик для кнопки "Добавить слово"
         addWordButton.setOnClickListener(v -> {
-            // Переход на экран для добавления нового слова
             Intent intent = new Intent(MainActivity.this, AddWordActivity.class);
             startActivity(intent);
         });
@@ -100,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeButton("Нет", (dialog, which) -> dialog.dismiss())
                     .show();
         } else {
-            // Если сохранённой игры нет, сразу начинаем новую
             showPlayerNameDialog();
         }
     }
@@ -109,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        // Инфлейт разметки диалогового окна
         @SuppressLint("InflateParams")
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_player_names, null);
         builder.setView(dialogView);

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -213,7 +212,6 @@ public class GameActivity extends AppCompatActivity {
                     .show();
         } else {
             // Вход в режим замены
-            // поставить заголовок + заменить надписи на кнопках
             turnInfo.setText("Выберите фишки");
             cancelTurn();
             selectedTile = null;
@@ -268,12 +266,10 @@ public class GameActivity extends AppCompatActivity {
                         }
                     });
                 });
-                executorService.shutdown(); // Закрываем ExecutorService после выполнения задачи
+                executorService.shutdown();
             } catch (InvalidPlacementException e) {
-                // Обработка ошибки: выводим сообщение, что размещение слова некорректно
                 showToast("Ошибка: " + e.getMessage());
             } catch (RuntimeException e) {
-                // Обработка ошибки: ловим все неожиданные ошибки
                 showToast("Неизвестная ошибка: " + e.getMessage());
             }
         }
@@ -476,6 +472,7 @@ public class GameActivity extends AppCompatActivity {
         }
         Log.i("loading board ", String.valueOf(gameBoard));
 
+        // Восстановление размещённых фишек
         String placedTilesData = sharedPreferences.getString(KEY_PLACED_TILES, "");
         Log.i("load tiles", placedTilesData);
         if (!placedTilesData.isEmpty()) {
